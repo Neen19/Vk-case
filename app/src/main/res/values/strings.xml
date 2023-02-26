@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Vk case</string>
+    <string name="you">You</string>
+    <string name="long_string">Venera Long Contact For Test And More</string>
+    <string name="link">https://source.unsplash.com/random/130x130?human</string>
+    <string name="alertMessage">Do you want to change the avatar of the interlocutor?</string>
+    <string name="alertTitle">Hello</string>
+    <string name="positiveButton">yes</string>
+    <string name="positiveToast">User avatar is about to change</string>
+    <string name="negativeButton">No</string>
+    <string name="negativeToast">User avatar remains the same</string>
+
+</resources>

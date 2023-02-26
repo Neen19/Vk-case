@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Vk case</string>
+    <string name="you">Вы</string>
+    <string name="long_string">Длинный Контакт Венеры Для Тестирования И Не Только</string>
+    <string name="link">https://source.unsplash.com/random/130x130?human</string>
+    <string name="alertMessage">Хочешь поменять аватарку собеседника?</string>
+    <string name="alertTitle">Привет</string>
+    <string name="positiveButton">Да</string>
+    <string name="positiveToast">Аватар пользователя вот-вот изменится</string>
+    <string name="negativeButton">Нет</string>
+    <string name="negativeToast">Аватар пользователя остался прежним</string>
+
+</resources>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181513"
+    tools:context=".MainActivity">
+
+
+
+
+    <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/videocam_off_fill0_wght400_grad0_opsz48"
+        android:background="@drawable/circle_white"
+        app:layout_constraintStart_toStartOf="@id/bottomIcons"
+        app:layout_constraintTop_toTopOf="@id/bottomIcons"
+        app:layout_constraintBottom_toBottomOf="@id/bottomIcons"
+        app:layout_constraintEnd_toStartOf="@id/micro"
+        />
+
+    <ImageButton
+        android:id="@+id/micro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mic_fill0_wght400_grad0_opsz48"
+        android:background="@drawable/circle_gray"
+        app:layout_constraintTop_toTopOf="@id/bottomIcons"
+        app:layout_constraintStart_toEndOf="@id/camera"
+        />
+
+    <ImageButton
+        android:id="@+id/hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/waving_hand_fill0_wght400_grad0_opsz48"
+        android:background="@drawable/circle_gray"
+        app:layout_constraintStart_toEndOf="@id/micro"
+        app:layout_constraintTop_toTopOf="@id/bottomIcons"
+        />
+
+    <ImageButton
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_disabled_fill0_wght400_grad0_opsz48"
+        android:background="@drawable/circle_red"
+        app:layout_constraintStart_toEndOf="@id/hand"
+        app:layout_constraintTop_toTopOf="@id/bottomIcons"
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/bottomIcons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:flow_wrapMode="chain"
+        app:flow_horizontalStyle="spread_inside"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:padding="5dp"
+        app:constraint_referenced_ids="camera, micro, hand, phone"
+        />
+
+
+
+
+    <ImageButton
+        android:id="@+id/palka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/bottomIcons"
+        app:layout_constraintStart_toStartOf="@id/bottomIcons"
+        app:layout_constraintBottom_toTopOf="@id/bottomIcons"
+        android:background="@null"
+        android:src="@drawable/remove_fill0_wght400_grad0_opsz48"
+        />
+
+    <ImageButton
+        android:id="@+id/baseline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_expand_more_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        />
+
+    <ImageButton
+        android:id="@+id/chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chat_bubble_fill0_wght400_grad0_opsz48"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="@id/topIcons"
+        app:layout_constraintStart_toStartOf="@id/topIcons"
+        />
+
+    <ImageButton
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/group_fill0_wght400_grad0_opsz48"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="@id/topIcons"
+        app:layout_constraintStart_toEndOf="@id/chat"
+        />
+
+    <ImageButton
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/grid_view_fill0_wght400_grad0_opsz48"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="@id/topIcons"
+        app:layout_constraintStart_toEndOf="@id/group"
+        />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/topIcons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="16dp"
+        app:constraint_referenced_ids="chat, group, grid"
+        app:flow_horizontalStyle="spread_inside"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/baseline" />
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topIcons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/palka">
+
+
+        <FrameLayout
+            android:id="@+id/firstTile"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/greed_background"
+                android:alpha="0.2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/long_string"
+                android:textSize="20sp"
+                android:paddingBottom="4dp"
+                android:paddingHorizontal="10dp"
+                android:textColor="#FFFFFF"
+                android:gravity="bottom|center"
+                android:singleLine="true"
+                android:layout_gravity="bottom"
+                android:drawableRight="@drawable/micro"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/image"
+                android:layout_gravity="center"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/circular"
+                />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/secondTile"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/greed_background"
+                android:alpha="0.2"
+                />
+
+
+            <TextView
+                android:id="@+id/you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="@string/you"
+                android:paddingBottom="4dp"
+                android:textSize="20sp"
+
+                android:layout_gravity="bottom|center"
+                android:singleLine="true"
+                android:drawableRight="@drawable/micro"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/youImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/no_photography_fill0_wght400_grad0_opsz48"
+                android:scaleType="centerInside"
+                android:background="#FF000000"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/circular"
+                />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
